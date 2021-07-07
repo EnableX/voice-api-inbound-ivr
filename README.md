@@ -41,7 +41,7 @@ For Mac and Linux, open a terminal window and type the following commands. Note 
   - With ngrok, you can generate HTTP / HTTPS URL (such as https://fc6c892d6cd7.ngrok.io)
   - that tunnels requests to web server running locally on your own computer at a given port
   - ngrok (https://ngrok.com/) should be installed on your computer
-    - `USE_NGROK_TUNNEL=`
+    - `export USE_NGROK_TUNNEL=`
 
 - set redirect parameter to bridge the call
   - `export REDIRECT_NUMBER=`
@@ -51,7 +51,7 @@ For Mac and Linux, open a terminal window and type the following commands. Note 
 
 For Windows:
   - Make a file with name ".env" in root directory . And copy content of .env.example in .env file . Then set the environment variables manually in .env file . And below are the environment variables .
-    - `ENABLEX_APP_ID` , `ENABLEX_APP_KEY` , `SERVICE_PORT` , `USE_PUBLIC_WEBHOOK` , `PUBLIC_WEBHOOK_HOST` , `USE_NGROK_TUNNEL` , `REDIRECT_NUMBER` , `LISTEN_SSL`
+    - `ENABLEX_APP_ID` , `ENABLEX_APP_KEY` , `SERVICE_PORT` , `USE_PUBLIC_WEBHOOK` , `PUBLIC_WEBHOOK_HOST` , `USE_NGROK_TUNNEL` , `REDIRECT_NUMBER` , `LISTEN_SSL`.
     Their explanation is given in Linux/Mac section (Upper section).
 
 
@@ -80,7 +80,7 @@ For Windows (Using Git Bash):
   - Create and Install certificates
     - `openssl req -nodes -new -x509   -keyout example.key -out example.crt   -days 365` 
     - `cat example.crt > example.ca-bundle`
-  - Update these fields manually in .env file  if not given else you can ignore it.
+  - Update these fields manually in .env file if not given else you can ignore it.
     - use the certificate .key [self signed or registered]
       - `CERTIFICATE_SSL_KEY=`
     - use the certificate .crt [self signed or registered]
